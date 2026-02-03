@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="{{ $page->description ?? $page->siteDescription }}">
+
+        <meta property="og:title" content="{{ $page->title ? $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
+        <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
+        <meta property="og:url" content="{{ $page->getUrl() }}"/>
+        <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
+
+        <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
+
+        <link rel="home" href="{{ $page->baseUrl }}">
+        <link rel="icon" href="/favicon.ico">
+        <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
+
+        @if ($page->production)
+            <!-- Insert analytics code here -->
+        @endif
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+
+        @viteRefresh()
+        <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
+        <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
+    
+    </head>
+
+    <body class="flex flex-col justify-between min-h-screen leading-normal">
+        <header class="bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4" role="banner">
+    <div class="max-w-8xl mx-auto px-4 lg:px-8">
+        <div class="text-center">
+            <a href="/" title="{{ $page->siteName }} home" class="text-center text-[var(--text)]">
+                <div class="block text-3xl my-0 font-heading">{{ $page->siteName }}</div>
+                <div class="block text-center font-title text-2xl tracking-[.7em] uppercase text-[var(--text)]">Redshift</div>
+            </a>
+        </div>
+
+        <div id="vue-search" class="flex flex-1 justify-center items-center mt-4">
+            @include('_components.search')
+            @include('_nav.menu')
+            @include('_nav.menu-toggle')
+        </div>
+    </div>
+</header>
+        @include('_nav.menu-responsive')
+
+        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-7 px-4">
+            @yield('body')
+        </main>
+
+       <footer class="bg-gradient-to-b from-transparent to-[var(--bg)] text-center text-sm pt-12 py-4" role="contentinfo">
+            <ul class="flex flex-col md:flex-row justify-center list-none">
+                <li class="md:mr-2">
+                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+                </li>
+
+                <li>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                </li>
+            </ul>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+        @stack('scripts')
+    </body>
+</html>

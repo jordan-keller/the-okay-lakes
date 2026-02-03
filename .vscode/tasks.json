@@ -1,0 +1,5 @@
+{
+  "label": "jss",
+  "type": "shell",
+  "command": ".vendor/bin/jigsaw serve"
+}

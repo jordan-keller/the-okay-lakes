@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "serve": "concurrently \"npm run dev\" \"./vendor/bin/jigsaw serve\"",
+    "build": "vite build",
+    "prod": "vite build --mode production"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "@tighten/jigsaw-vite-plugin": "^1.0.0",
+    "alpinejs": "^3.14.1",
+    "concurrently": "^9.2.1",
+    "fuse.js": "^6.4.6",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.2.1"
+  },
+  "dependencies": {
+    "@fontsource-variable/eb-garamond": "^5.2.7"
+  }
+}

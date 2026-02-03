@@ -1,0 +1,179 @@
+@import "@fontsource-variable/eb-garamond";
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --shadow-search:
+      0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  html {
+    @apply text-base/7 w-full;
+  }
+
+  body {
+    @apply bg-[var(--bg)] font-serif;
+    font-size: 1.25rem;
+    background-image: url("/assets/img/layout_bg.jpg");
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  /* Add overlay for opacity effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0b161f80;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+p {
+  @apply font-light text-[var(--text)];
+}
+
+p a {
+  @apply font-normal underline underline-offset-7 decoration-[var(--link)] decoration-1;
+}
+
+p a:hover {
+  @apply no-underline text-[var(--link-hover)];
+}
+
+p a:visited {
+  @apply text-[var(--link)] opacity-75;
+}
+
+.prose {
+  @apply whitespace-pre-line max-w-4xl mx-auto px-6;
+}
+
+.prose ul,
+.prose ol,
+.prose li {
+  @apply whitespace-normal;
+}
+
+.prose ul {
+  @apply list-disc ml-12;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+h1 {
+  @apply text-4xl tracking-wide text-[var(--text)];
+  font-family: var(--font-heading);
+}
+
+h2 {
+  @apply text-lg tracking-wider font-normal text-[var(--text)];
+  font-family: var(--font-heading);
+}
+
+h3 {
+  @apply text-sm tracking-wider font-normal text-[var(--text)];
+  font-family: var(--font-heading);
+}
+
+hr {
+  @apply my-3;
+}
+
+.btn {
+  @apply text-[var(--text)] w-1/3 text-center uppercase text-lg tracking-wider border-1 transition duration-500 hover:bg-[var(--link)]/20 border-1 p-2;
+}
+
+.markdown-content {
+  white-space: pre-line;
+}
+
+footer {
+  @apply text-[var(--color-text-1)] text-xs;
+}
+
+footer a {
+  @apply text-[var(--color-text-2)];
+}
+
+footer a:hover {
+  @apply text-[var(--color-text-2)] underline underline-offset-2;
+}
+
+footer a:visited {
+  @apply text-[var(--color-text-2)] opacity-75;
+}
+
+@layer utilities {
+  .shadow-search {
+    box-shadow: var(--shadow-search);
+  }
+}
+
+@font-face {
+  font-family: "RoyalPrintingCapsItalic";
+  src: url("../fonts/1790RoyalPrintingCapsItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RoyalPrintingCapsNormal";
+  src: url("../fonts/1790RoyalPrintingCapsNormal.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+  text-transform: uppercase;
+}
+
+@theme {
+  --font-serif:
+    "EB Garamond Variable", ui-serif, system-ui, serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Nunito Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-heading: "RoyalPrintingCapsItalic";
+  --font-title: "RoyalPrintingCapsNormal";
+
+  --bg: #0b161f;
+  --text: #dbf5ff;
+  --link: #5afff8;
+  --link-hover: #dbf5ff;
+}
+
+/* Syntax Highlight by Prism */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #e5e7eb;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: transparent;
+}
