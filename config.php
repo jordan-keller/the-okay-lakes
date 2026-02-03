@@ -6,8 +6,8 @@ return [
     'baseUrl' => 'http://localhost:8000',
     'production' => false,
     'siteName' => 'The Okay Lakes',
-    'siteDescription' => 'Debut album "\Redshift"\:\ 12 songs to soundtrack night drives on Midwest back roads.\'',
-    'siteAuthor' => 'Author Name',
+    'siteDescription' => 'Redshift is an album for night drives on Michigan back roads.\'',
+    'siteAuthor' => 'The Okay Lakes',
 
     // collections
     'collections' => [
