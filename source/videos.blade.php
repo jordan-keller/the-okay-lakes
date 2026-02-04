@@ -6,7 +6,7 @@ description: Music videos, album trailers, and live videos for Redshift.
 
 @section('body')
 
-<div class="max-w-4xl mx-auto space-y-8 bg-black/40 backdrop-blur-sm p-8">
+<div class="max-w-4xl mx-auto space-y-8 bg-black/40 backdrop-blur-sm sm:p-4 p-8">
     @forelse($videos as $video)
     <div>
         <div class="w-full">
@@ -25,7 +25,7 @@ description: Music videos, album trailers, and live videos for Redshift.
             </div>
         </div>
         @if($video->getContent())
-        <div class="text-xl font-normal pt-4 font-title text-[var(--text)] uppercase tracking-widest">{{ $video->title }}</div>
+        <div class="text-2xl font-normal pt-4 font-title text-[var(--text)] uppercase mb-4 tracking-widest">{{ $video->title }}</div>
         <span class="text-md/9 mx-auto">
             {!! $video->getContent() !!}
         </span>
