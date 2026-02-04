@@ -10,7 +10,7 @@ description: A little bit about the site
         alt="About image"
         class="flex h-[80%] w-[80%] bg-contain mx-auto my-6">
 
-    <p class="mb-6 whitespace-pre-line text-center text-sm">
+    <p class="mb-6 whitespace-pre-line text-center text-xl/9">
         12 Songs, 54 Minutes
         Released February 23, 2023
         © 2023 Random Pattern Records

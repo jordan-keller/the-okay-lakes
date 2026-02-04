@@ -32,18 +32,18 @@
 
     <body class="flex flex-col justify-between min-h-screen leading-normal">
         <header class="bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4" role="banner">
+            <div id="vue-search" class="flex flex-1 items-center mt-4 w-full">
+            @include('_components.search')
+            @include('_nav.menu')
+            @include('_nav.menu-toggle')
+        </div>
     <div class="max-w-8xl mx-auto px-4 lg:px-8 mt-8">
+    
         <div class="text-center">
             <a href="/" title="{{ $page->siteName }} home" class="text-center text-[var(--text)]">
                 <div class="block text-3xl my-0 font-heading">The Okay Lakes</div>
                 <div class="block text-center font-title text-2xl tracking-[.7em] uppercase text-[var(--text)]">Redshift</div>
             </a>
-        </div>
-
-        <div id="vue-search" class="flex flex-1 justify-center items-center mt-4">
-            @include('_components.search')
-            @include('_nav.menu')
-            @include('_nav.menu-toggle')
         </div>
     </div>
 </header>
