@@ -6,7 +6,7 @@ description: Music videos, album trailers, and live videos for Redshift.
 
 @section('body')
 
-<div class="max-w-4xl mx-auto space-y-8">
+<div class="max-w-4xl mx-auto space-y-8 bg-black/40 backdrop-blur-sm p-8">
     @forelse($videos as $video)
     <div>
         <div class="w-full">

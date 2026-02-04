@@ -6,10 +6,10 @@
 
 @section('body')
     @if ($page->cover_image)
-        <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
+        <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-8">
     @endif
 
-    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
+    <h1 class="leading-none mb-2 capitalize">{{ $page->title }}</h1>
 
     <p class="text-xl md:mt-0">{{ date('F j, Y', $page->date) }}</p>
 
@@ -23,7 +23,7 @@
         @endforeach
     @endif
 
-    <div class="border-b border-[var(--text)] mb-10 pb-4 my-2" v-pre>
+    <div class="border-b border-[var(--text)] mb-10 pb-4 text-xl/9">
         @yield('content')
     </div>
 

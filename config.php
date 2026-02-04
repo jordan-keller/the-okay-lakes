@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl' => 'https://theokaylakes.com',
+    'baseUrl' => 'http://the-okay-lakes.test',
     'production' => false,
     'siteName' => 'The Okay Lakes',
     'siteDescription' => 'Redshift is an album for night drives on Michigan back roads.\'',

@@ -37,7 +37,7 @@ The echoes of your own voice screaming
 Born again… again
 Got no soul to sell
 When your sermon ends
-You’re orphaned to yourself
+And you’re orphaned to yourself
 Nothing to defend
 Nothing to impart
 Nothing but the heat

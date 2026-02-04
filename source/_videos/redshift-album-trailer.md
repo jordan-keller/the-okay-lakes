@@ -8,3 +8,4 @@ description: 'Trailer for "Redshift," the debut album by The Okay Lakes. Out Feb
 
 Original artwork by David Bez
 Animation by Ken Otsuka
+Edited by Ryan Birkett

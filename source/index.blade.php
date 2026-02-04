@@ -7,19 +7,19 @@
                 <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="mb-6">
             @endif
 
-            <p class="font-medium my-2">
-                {{ $featuredPost->getDate()->format('F j, Y') }}
+            <p class="text-sm my-2 tracking-widest uppercase">
+                {{ $featuredPost->getDate()->format('M d, Y') }}
             </p>
 
-            <h2 class="text-3xl mt-0">
-                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="font-extrabold">
+            <div class="text-3xl mt-0 mb-1 text-[var(--text)]">
+                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="font-normal capitalize">
                     {{ $featuredPost->title }}
                 </a>
-            </h2>
+            </div>
 
-            <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
+            <p class="mt-0 mb-1">{!! $featuredPost->getExcerpt() !!}</p>
 
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="uppercase tracking-wide mb-4 text-[var(--text)] decoration-[var(--link)] underline underline-offset-7 hover:text-[var(--link)] hover:no-underline">
+            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="text-sm uppercase tracking-wide mb-4 text-[var(--text)] decoration-[var(--link)] underline underline-offset-7 hover:text-[var(--link)] hover:no-underline">
                 Read
             </a>
         </div>

@@ -32,7 +32,7 @@
 
     <body class="flex flex-col justify-between min-h-screen leading-normal">
         <header class="bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4" role="banner">
-    <div class="max-w-8xl mx-auto px-4 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 lg:px-8 mt-8">
         <div class="text-center">
             <a href="/" title="{{ $page->siteName }} home" class="text-center text-[var(--text)]">
                 <div class="block text-3xl my-0 font-heading">The Okay Lakes</div>
@@ -53,14 +53,14 @@
             @yield('body')
         </main>
 
-       <footer class="bg-gradient-to-b from-transparent to-[var(--bg)] text-center text-sm pt-12 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-none">
+       <footer class="bg-gradient-to-b from-transparent to-[var(--bg)] text-center text-sm pt-12 py-4 font-serif" role="contentinfo">
+            <ul class="flex flex-col md:flex-col justify-center list-none text-[var(--text)]">
                 <li class="md:mr-2">
-                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+                    &copy; <a href="https://tighten.co" title="Tighten website">The Okay Lakes</a> {{ date('Y') }}.
                 </li>
 
                 <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a> by <a href="https://tighten.co" title="Tighten website">Tighten</a>
                     and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
                 </li>
             </ul>
