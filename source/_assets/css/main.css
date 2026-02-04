@@ -132,17 +132,21 @@ footer a:visited {
 }
 
 @font-face {
-  font-family: "RoyalPrintingCapsItalic";
-  src: url("/assets/fonts/1790RoyalPrintingCapsItalic.woff") format("woff");
-  font-weight: normal;
+  font-family: RoyalPrintingCapsItalic;
+  src:
+    url(/assets/fonts/1790RoyalPrintingCapsItalic.woff2) format("woff2"),
+    url(/assets/fonts/1790RoyalPrintingCapsItalic.woff) format("woff");
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "RoyalPrintingCapsNormal";
-  src: url("/assets/fonts/1790RoyalPrintingCapsNormal.woff") format("woff");
-  font-weight: normal;
+  font-family: RoyalPrintingCapsNormal;
+  src:
+    url(/assets/fonts/1790RoyalPrintingCapsNormal.woff2) format("woff2"),
+    url(/assets/fonts/1790RoyalPrintingCapsNormal.woff) format("woff");
+  font-weight: 400;
   font-display: swap;
   text-transform: uppercase;
 }

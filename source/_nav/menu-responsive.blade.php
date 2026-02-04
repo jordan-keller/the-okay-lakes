@@ -11,7 +11,7 @@
             <li class="pl-4">
                 <a
                 title="{{ $page->siteName }} Lyrics"
-                href="/about"
+                href="/lyrics"
                 class="block mt-0 mb-4 text-md no-underline {{ $page->isActive('/lyrics') ? 'active text-[var(--link)]' : 'text-[var(--text)] underline decoration-[var(--link)] underline-offset-7 hover:text-[var(--link)] hover:no-underline' }}"
                 >Lyrics</a>
              </li>
@@ -20,7 +20,7 @@
             <li class="pl-4">
                 <a
                 title="{{ $page->siteName }} Video"
-                href="/about"
+                href="/videos"
                 class="block mt-0 mb-4 text-md no-underline {{ $page->isActive('/video') ? 'active text-[var(--link)]' : 'text-[var(--text)] underline decoration-[var(--link)] underline-offset-7 hover:text-[var(--link)] hover:no-underline' }}"
                 >Videos</a>
              </li>
