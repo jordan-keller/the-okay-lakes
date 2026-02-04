@@ -133,7 +133,7 @@ footer a:visited {
 
 @font-face {
   font-family: "RoyalPrintingCapsItalic";
-  src: url("../fonts/1790RoyalPrintingCapsItalic.woff") format("woff");
+  src: url("/assets/fonts/1790RoyalPrintingCapsItalic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -141,7 +141,7 @@ footer a:visited {
 
 @font-face {
   font-family: "RoyalPrintingCapsNormal";
-  src: url("../fonts/1790RoyalPrintingCapsNormal.woff") format("woff");
+  src: url("/assets/fonts/1790RoyalPrintingCapsNormal.woff") format("woff");
   font-weight: normal;
   font-display: swap;
   text-transform: uppercase;
