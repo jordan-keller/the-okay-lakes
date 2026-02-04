@@ -153,7 +153,7 @@ footer a:visited {
 
 @theme {
   --font-serif:
-    "EB Garamond Variable", ui-serif, system-ui, serif, "Apple Color Emoji",
+    "EB Garamond", ui-serif, system-ui, serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-sans:
     "Nunito Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
