@@ -25,8 +25,8 @@ description: Music videos, album trailers, and live videos for Redshift.
             </div>
         </div>
         @if($video->getContent())
-        <div class="text-3xl font-normal pt-4 font-title text-[var(--text)] uppercase tracking-widest">{{ $video->title }}</div>
-        <span class="whitespace-pre-line mx-auto">
+        <div class="text-xl font-normal pt-4 font-title text-[var(--text)] uppercase tracking-widest">{{ $video->title }}</div>
+        <span class="text-md/9 mx-auto">
             {!! $video->getContent() !!}
         </span>
         @endif
