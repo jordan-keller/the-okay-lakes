@@ -14,6 +14,8 @@ description: A little bit about the site
         12 Songs, 54 Minutes
         Released February 23, 2023
         © 2023 Random Pattern Records
+
+        More coming soon...
 </P>
 
 @endsection
