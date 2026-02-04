@@ -18,7 +18,7 @@ description: Lyrics for the album Redshift by The Okay Lakes
                     />
                 </div>
                 <div class="p-3">
-                    <div class="text-base font-medium line-clamp-2">{{ $lyric->title }}</div>
+                    <div class="text-base font-medium line-clamp-2 text-[var(--text)]/80 hover:text-[var(--text)]">{{ $lyric->title }}</div>
                 </div>
             </div>
         </a>

@@ -1,50 +1,43 @@
----
-extends: _layouts.lyric
-section: content
-title: "A Trusty Lie"
-album: "Redshift"
-image: "/assets/img/song-arts/a-trusty-lie.jpg"
-track: 4
----
-
-The ninth drink delivers
+<?php $__env->startSection('content'); ?><p>The ninth drink delivers
 The lines you've prewritten
 And a voice like yours admits no wrong
 I swirl the ice inside my glass
 Drowning out the very last words
-I should say
+I should say</p>
 
-I guess that
+<p>I guess that
 Everybody’s got a trusty lie they tell
 We fool ourselves with our own sleight of hand
 Everybody’s got a trusty lie they tell to themselves
 Keep it in your head
-Careful now, don’t let it wriggle out
+Careful now, don’t let it wriggle out</p>
 
-One sincere sentence
+<p>One sincere sentence
 And six years is ended
 Instead my voice sounds strange when I speak to you
 How’d we wind up here?
 Why do I stay?
-Repeat it one last time: "It's just for one more day”
+Repeat it one last time: "It's just for one more day”</p>
 
-‘Cuz everybody’s got a trusty lie they tell
+<p>‘Cuz everybody’s got a trusty lie they tell
 We fool ourselves with our own sleight of hand
 Everybody’s got a trusty lie they keep to themselves
 It sounds right your head
-Careful now…
+Careful now…</p>
 
-Oh!
+<p>Oh!
 If I met you here tonight
 For the first time
 I’d run the other way
 Oh!
-That’s a good one!
+That’s a good one!</p>
 
-Everybody’s got a trusty lie they tell to themselves
+<p>Everybody’s got a trusty lie they tell to themselves
 It’s safe inside your head
 So careful now…
 Careful now…
 Careful now…
 Don’t let it…
-Wriggle out
+Wriggle out</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layouts.lyric', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>

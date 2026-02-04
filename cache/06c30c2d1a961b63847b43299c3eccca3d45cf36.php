@@ -1,22 +1,13 @@
----
-extends: _layouts.lyric
-section: content
-title: "Redshift"
-album: "Redshift"
-image: "/assets/img/song-arts/redshift.jpg"
-track: 7
----
-
-It's the 42nd parallel
+<?php $__env->startSection('content'); ?><p>It's the 42nd parallel
 But half of this bar
 They talk like they're from somewhere else
 With a fake southern drawl
 It's like I turned the AM dial
 Sliding through to get a beer
 I'll stick around a little while
-But I don't wanna be long here
+But I don't wanna be long here</p>
 
-They fly the rebel flag in Michigan
+<p>They fly the rebel flag in Michigan
 They're born with the right
 Grandkids of militiamen
 Bred for the fight
@@ -25,18 +16,18 @@ Though they're falling on deaf ears
 The same words sounded different
 Back when I belonged here
 Those same words sounded different
-Back when I belonged here
+Back when I belonged here</p>
 
-I knew these men as kids
+<p>I knew these men as kids
 When I was like 'em myself
 Righteous with an ignorance
 Unknown to itself
 But gravity took over
 I saw a world beyond this sphere
 If it'd pulled me closer
-I still might belong here
+I still might belong here</p>
 
-Instead, I came back every Christmas
+<p>Instead, I came back every Christmas
 Bit my tongue till it bled
 Felt my closest grow distant
 As their blue blood went red
@@ -45,18 +36,18 @@ Too far gone to draw in near
 Didn't notice I was changing
 Till I didn't belong here
 Didn't notice I was changing
-Till I didn't belong here
+Till I didn't belong here</p>
 
-Now, I'm drunk under the glimmer
+<p>Now, I'm drunk under the glimmer
 Of a thousand more stars
 And they'll go red as they grow dimmer
 Till they're lost to the dark
 I'll be restless in my searching
 As heaven disappears
 Man, I used to be so certain
-Back when I belonged here
+Back when I belonged here</p>
 
-So here's to every nowhere village
+<p>So here's to every nowhere village
 To the dark-hidden stars
 To the places god no longer visits
 Or sends his regards
@@ -65,4 +56,6 @@ Way back then it wasn't clear
 With some distance now I see it
 I don't wanna belong here
 With some distance now I see it
-I don't wanna belong here
+I don't wanna belong here</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layouts.lyric', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>

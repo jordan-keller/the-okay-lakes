@@ -6,8 +6,8 @@
         <h1 class="text-4xl font-bold text-white mb-8">{{ $page->title }}</h1>
         <img src="{{ $page->image }}" alt="{{ $page->title }}" class="w-64 h-64 object-cover mb-8 mx-auto rounded shadow-lg" loading="lazy" />
         
-        <div class="content whitespace-pre-wrap text-white/90 max-w-2xl text-lg leading-relaxed">
-            {!! $page->getContent() !!}
+        <div class="content whitespace-pre-wrap text-red-900 max-w-2xl text-lg leading-relaxed">
+            @yield('content')
         </div>
     </div>
 </div>

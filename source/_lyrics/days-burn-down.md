@@ -1,6 +1,6 @@
 ---
 extends: _layouts.lyric
-section: body
+section: content
 title: "Days Burn Down"
 album: "Redshift"
 image: "/assets/img/song-arts/days-burn-down.jpg"

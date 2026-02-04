@@ -1,42 +1,35 @@
----
-extends: _layouts.lyric
-section: content
-title: "Old Bruise"
-album: "Redshift"
-image: "/assets/img/song-arts/old-bruise.jpg"
-track: 9
----
-
-Your uncle’s on his shit again
+<?php $__env->startSection('content'); ?><p>Your uncle’s on his shit again
 Four fingers of Midleton
 Nursing all his lone regrets
 Laughing off his eulogy
 That all the fools he used to be
 And all the men he might have been
-Wound up him instead
+Wound up him instead</p>
 
-What will you have when you’re looking back
+<p>What will you have when you’re looking back
 Once what’s ahead is the distant past
 And all of the life that you left to chance
 Wastes away?
-Wastes away?
+Wastes away?</p>
 
-Sipping something on the rocks
+<p>Sipping something on the rocks
 Spinning on a moonlit dock
 Numb as an old bruise
 I’m poring over everything
 I got regrets ahead of me
 But I’m wondering which ones I’ll choose
-And which choose me instead
+And which choose me instead</p>
 
-What will I have when I’m looking back?
+<p>What will I have when I’m looking back?
 Once what’s ahead is the distant past
 The sum of a life that was left to chance
 What will I have?
-Man, I don’t know, but
+Man, I don’t know, but</p>
 
-I don’t want to waste away, no
+<p>I don’t want to waste away, no
 I don’t want to waste away, no
 I don’t want to waste away, no
 I don’t want to waste away
-To waste away anymore
+To waste away anymore</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layouts.lyric', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>

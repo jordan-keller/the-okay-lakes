@@ -1,13 +1,4 @@
----
-extends: _layouts.lyric
-section: content
-title: "A Handful of Mud"
-album: "Redshift"
-image: "/assets/img/song-arts/a-handful-of-mud.jpg"
-track: 12
----
-
-So
+<?php $__env->startSection('content'); ?><p>So
 Before we go
 There’s something you ought to know
 There are bones
@@ -16,13 +7,13 @@ Holding their dying pose
 And they went
 Clawing for breath
 Clinging to hope that
-They would make it
+They would make it</p>
 
-Out
+<p>Out
 Mmm
-Out
+Out</p>
 
-And when
+<p>And when
 The panic sets in
 And your body betrays you
 Your screams won’t make a sound
@@ -30,15 +21,17 @@ You gotta kick like hell
 And save yourself somehow
 Knowing you’ll drown
 Clinging to hope
-That you might make it
+That you might make it</p>
 
+<p>Out
 Out
 Out
-Out
-Ohh…
+Ohh…</p>
 
-And if
+<p>And if
 You kick till you hit
 Grab a handful of mud
 To prove you made it
-Down
+Down</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layouts.lyric', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>

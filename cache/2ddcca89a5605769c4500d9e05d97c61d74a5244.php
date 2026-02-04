@@ -1,33 +1,24 @@
----
-extends: _layouts.lyric
-section: content
-title: "Till the End Time Begins"
-album: "Redshift"
-image: "/assets/img/song-arts/till-the-endtime-begins.jpg"
-track: 10
----
-
-Blue
+<?php $__env->startSection('content'); ?><p>Blue
 Bleeds through the blinds
 Another new year
 The same old lang synes
 Come…
-Come…
+Come…</p>
 
-I saved your birthday cards
+<p>I saved your birthday cards
 “Your twenties,” you wrote
 “Are gonna be hard”
 But there’s empty fifths in your trash
 And there’s questions that I’m
 Too terrified to ask
-Yeah…
+Yeah…</p>
 
-Feel the harsh light
+<p>Feel the harsh light
 Of the red morning sun
 You can wait your whole life
-For an answer that won’t come
+For an answer that won’t come</p>
 
-But if the chyrons start
+<p>But if the chyrons start
 I hope that you’re walking in a field,
 Counting stars
 None of this Hemingway crap
@@ -38,9 +29,9 @@ Till the big one hits
 How long do you figure an apocalypse is?
 And what’ll you do till then?
 Till the end time begins?
-Till the end time begins?
+Till the end time begins?</p>
 
-Why’d you hunker
+<p>Why’d you hunker
 Down there on your own?
 Fighting demons
 Like they’re yours alone?
@@ -49,10 +40,12 @@ There’s a shred of a chance
 We’re not doomed
 Stop saving
 Your soul and
-Put the damned thing to use
+Put the damned thing to use</p>
 
-‘Cuz yes I promise I’m a lot like you
+<p>‘Cuz yes I promise I’m a lot like you
 I’ve never been so sure of our certain doom
 But what do we do till then?
 Till the end time begins?
-Till the end time begins?
+Till the end time begins?</p>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_layouts.lyric', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>

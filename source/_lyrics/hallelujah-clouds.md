@@ -1,6 +1,6 @@
 ---
 extends: _layouts.lyric
-section: body
+section: content
 title: "Hallelujah Clouds"
 album: "Redshift"
 image: "/assets/img/song-arts/hallelujah-clouds.jpg"

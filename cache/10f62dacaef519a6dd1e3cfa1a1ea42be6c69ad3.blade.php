@@ -1,7 +1,3 @@
----
-title: About
-description: A little bit about the site
----
 @extends('_layouts.main')
 
 @section('body')
