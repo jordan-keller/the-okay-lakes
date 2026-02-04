@@ -35,7 +35,7 @@
     <div class="max-w-8xl mx-auto px-4 lg:px-8">
         <div class="text-center">
             <a href="/" title="{{ $page->siteName }} home" class="text-center text-[var(--text)]">
-                <div class="block text-3xl my-0 font-heading">{{ $page->siteName }}</div>
+                <div class="block text-3xl my-0 font-heading">The Okay Lakes</div>
                 <div class="block text-center font-title text-2xl tracking-[.7em] uppercase text-[var(--text)]">Redshift</div>
             </a>
         </div>
