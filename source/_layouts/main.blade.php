@@ -32,12 +32,12 @@
             <span class="flex-1 max-w-8xl text-left px-4 py-4 lg:items-end">
                 <div class="text-left align-bottom">
                     <a href="/" title="{{ $page->siteName }} home">
-                    <div class="text-2xl tracking-[.04em] font-heading no-wrap text-left text-[var(--text)] block">The Okay Lakes</div>
-                    <div class="block text-2xl tracking-[.7em] uppercase text-[var(--text)] leading-none">Redshift</div>
+                    <div class="text-2xl tracking-[.14em] font-heading no-wrap text-left text-[var(--text)] block">The Okay Lakes</div>
+                    <div class="block text-2xl tracking-[.7em] uppercase text-[var(--text)] leading-none font-title">Redshift</div>
                     </a>
                 </div>
             </span>
-            <span id="vue-search" class="flex flex-1 mt-4 w-full place-content-end items-end pr-8">
+            <span id="vue-search" class="flex flex-1 mt-4 w-full place-content-end items-end pr-8 font-serif">
             @include('_components.search')
             @include('_nav.menu')
             @include('_nav.menu-toggle')
