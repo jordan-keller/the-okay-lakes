@@ -17,10 +17,6 @@
         <link rel="icon" href="/favicon.ico">
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
-        @if ($page->production)
-            <!-- Insert analytics code here -->
-        @endif
-
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
 
@@ -30,22 +26,21 @@
     
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen leading-normal">
-        <header class="bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4" role="banner">
-            <div id="vue-search" class="flex flex-1 items-center mt-4 w-full">
+    <body class="flex flex-col justify-between min-h-screen leading-normal border-1 border-black">
+        <header class="flex flex-row bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4 items-end" role="banner">
+            <span class="flex-1 max-w-8xl text-left lg:px-8 mt-4 items-end">
+                <div class="text-left align-bottom">
+                    <a href="/" title="{{ $page->siteName }} home" class="text-left text-[var(--text)] block">
+                    <div class="block text-xl tracking-[.04em] font-heading no-wrap">The Okay Lakes</div>
+                    <div class="block font-xl text-md tracking-[.7em] uppercase text-[var(--text)] leading-none">Redshift</div>
+                    </a>
+                </div>
+            </span>
+            <span id="vue-search" class="flex flex-1 mt-4 w-full place-content-end items-end pr-8">
             @include('_components.search')
             @include('_nav.menu')
             @include('_nav.menu-toggle')
-        </div>
-    <div class="max-w-8xl mx-auto px-4 lg:px-8 mt-8">
-    
-        <div class="text-center">
-            <a href="/" title="{{ $page->siteName }} home" class="text-center text-[var(--text)]">
-                <div class="block text-3xl my-0 font-heading">The Okay Lakes</div>
-                <div class="block text-center font-title text-2xl tracking-[.7em] uppercase text-[var(--text)]">Redshift</div>
-            </a>
-        </div>
-    </div>
+            </span>
 </header>
         @include('_nav.menu-responsive')
 
