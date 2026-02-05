@@ -8,7 +8,7 @@ description: Music videos, album trailers, and live videos for Redshift.
 
 <div class="lg:max-w-full sm:max-w-full mx-2 bg-black/40 backdrop-blur-sm snap-y snap-mandatory overflow-y-scroll h-screen">
     @forelse($videos as $video)
-    <div class="lg:min-h-screen md:min-h-full snap-start snap-always">
+    <div class="lg:min-h-screen md:min-h-full snap-start snap-normal">
         <div class="w-full">
             <div class="aspect-video">
                 <iframe 
