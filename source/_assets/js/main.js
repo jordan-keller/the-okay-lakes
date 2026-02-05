@@ -9,15 +9,10 @@ Alpine.start();
 const progressBar = document.getElementById("progress-bar");
 
 if (progressBar) {
-  const gradientStartOpacity = 1;
-  const gradientStartStop = "60%";
-  const featherWidth = 10; // Width of blend zone in %
-
-  // Set fixed positioning styles
   progressBar.style.position = "fixed";
   progressBar.style.bottom = "0";
   progressBar.style.left = "0";
-  progressBar.style.height = "4px";
+  progressBar.style.height = "2px";
   progressBar.style.zIndex = "9999";
   progressBar.style.pointerEvents = "none";
   progressBar.style.mixBlendMode = "screen";
@@ -30,19 +25,25 @@ if (progressBar) {
     const scrollableHeight = documentHeight - windowHeight;
     const scrollPercent = (scrollTop / scrollableHeight) * 100;
 
-    const gradientEndStop = Math.max(0, 100 - scrollPercent);
-    const gradientEndOpacity = scrollPercent / 100;
+    // Base values
+    let opacity = 0.8;
+    let featherWidth = 10;
 
-    // Create feathering stops
-    const featherStart = Math.max(0, gradientEndStop - featherWidth);
-    const featherMid = (gradientEndStop + featherStart) / 1;
-    const midOpacity = gradientEndOpacity * 0.5;
+    // At 90%+ scroll, decrease feather and increase opacity
+    if (scrollPercent >= 90) {
+      const finalPercent = (scrollPercent - 90) / 10; // 0 to 1
+      featherWidth = 10 * (1 - finalPercent); // 10 to 0
+      opacity = 0.8 + 0.2 * finalPercent; // 0.8 to 1.0
+    }
+
+    const featherStart = Math.max(0, 100 - featherWidth);
+    const featherMid = (100 + featherStart) / 2;
 
     progressBar.style.background = `linear-gradient(to right, 
-      rgba(255, 255, 255, ${gradientStartOpacity}) ${gradientStartStop}, 
-      rgba(255, 255, 255, ${gradientStartOpacity}) ${featherStart}%, 
-      rgba(255, 255, 255, ${midOpacity}) ${featherMid}%, 
-      rgba(255, 255, 255, ${gradientEndOpacity}) ${gradientEndStop}%)`;
+      rgba(255, 255, 255, ${opacity}) 0%, 
+      rgba(255, 255, 255, ${opacity}) ${featherStart}%, 
+      rgba(255, 255, 255, ${opacity * 0.5}) ${featherMid}%, 
+      rgba(255, 255, 255, 0) 100%)`;
     progressBar.style.width = scrollPercent + "%";
   });
 }
