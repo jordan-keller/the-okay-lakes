@@ -1,4 +1,4 @@
-<button class="flex justify-self-start items-center bg-[var(--link)] border border-[var(--bg)]/70 h-7 px-2 lg:hidden focus:outline-hidden ml-4"
+<button class="flex justify-self-start items-center bg-[var(--text)] border border-[var(--bg)]/70 h-7 px-2 lg:hidden focus:outline-hidden ml-4"
     onclick="navMenu.toggle()"
 >
     <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"

@@ -6,9 +6,9 @@ description: Music videos, album trailers, and live videos for Redshift.
 
 @section('body')
 
-<div class="max-w-4xl mx-auto space-y-8 bg-black/40 backdrop-blur-sm sm:p-4 p-8">
+<div class="lg:max-w-full sm:max-w-full mx-2 bg-black/40 backdrop-blur-sm snap-y snap-mandatory overflow-y-scroll h-screen">
     @forelse($videos as $video)
-    <div>
+    <div class="lg:min-h-screen md:min-h-full snap-start snap-normal">
         <div class="w-full">
             <div class="aspect-video">
                 <iframe 
@@ -25,10 +25,10 @@ description: Music videos, album trailers, and live videos for Redshift.
             </div>
         </div>
         @if($video->getContent())
-        <div class="text-2xl font-normal pt-4 font-title text-[var(--text)] uppercase mb-4 tracking-widest">{{ $video->title }}</div>
-        <span class="text-md/9 mx-auto">
+        <div class="prose text-2xl font-normal pt-4 font-title text-[var(--text)] uppercase mb-4 tracking-widest">{{ $video->title }}</div>
+        <div class="prose">
             {!! $video->getContent() !!}
-        </span>
+        </div>
         @endif
     </div>
     @empty

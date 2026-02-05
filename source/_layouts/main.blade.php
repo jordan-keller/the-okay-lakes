@@ -26,13 +26,14 @@
     
     </head>
 
-    <body class="flex flex-col justify-between min-h-screen leading-normal border-1 border-black">
-        <header class="flex flex-row bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4 items-end" role="banner">
-            <span class="flex-1 max-w-8xl text-left lg:px-8 mt-4 items-end">
+    <body class="flex flex-col justify-between min-h-screen maleading-normal border-1 border-black">
+           <div id="progress-bar" class="bg-white/50"></div>
+        <header class="flex flex-row bg-gradient-to-b to-transparent from-[var(--bg)]/80 py-4 px-4 items-start " role="banner">
+            <span class="flex-1 max-w-8xl text-left px-4 py-4 lg:items-end">
                 <div class="text-left align-bottom">
-                    <a href="/" title="{{ $page->siteName }} home" class="text-left text-[var(--text)] block">
-                    <div class="block text-xl tracking-[.04em] font-heading no-wrap">The Okay Lakes</div>
-                    <div class="block font-xl text-md tracking-[.7em] uppercase text-[var(--text)] leading-none">Redshift</div>
+                    <a href="/" title="{{ $page->siteName }} home">
+                    <div class="text-2xl tracking-[.04em] font-heading no-wrap text-left text-[var(--text)] block">The Okay Lakes</div>
+                    <div class="block text-2xl tracking-[.7em] uppercase text-[var(--text)] leading-none">Redshift</div>
                     </a>
                 </div>
             </span>
@@ -44,7 +45,7 @@
 </header>
         @include('_nav.menu-responsive')
 
-        <main role="main" class="flex-auto w-full container max-w-4xl mx-auto py-7 px-4">
+        <main role="main" class="flex-auto w-full container max-w-full mx-auto py-8">
             @yield('body')
         </main>
 
