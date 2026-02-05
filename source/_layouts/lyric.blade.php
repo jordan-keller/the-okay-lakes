@@ -4,8 +4,7 @@
 
 <div class="lyric-detail min-h-screen flex flex-col" @isset($page->image) style="background-image: url('{{ $page->image }}'); background-size: cover; background-position: center; background-attachment: fixed;" @endisset>
     
-    <div class="bg-black/40 backdrop-blur-sm flex-1 flex flex-col p-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 10px, rgba(0, 0, 0, 0.4) calc(100% - 10px), rgba(0, 0, 0, 0) 100%);">
-
+@component('_components.backdrop-overlay')
         <div class="flex md:flex-col lg:flex-row gap-x-10">
             
             <span class="flex-1 pt-0">
@@ -23,4 +22,5 @@
 
         </div>
     </div>
+@endcomponent
 @endsection
