@@ -2,10 +2,13 @@
 
 @section('body') 
     @foreach ($posts->where('featured', true) as $featuredPost)
-        <div class="w-full mb-6">
+        <div class="max-w-4xl mb-6 mx-auto">
             @if ($featuredPost->cover_image)
                 <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="mb-6">
             @endif
+
+            @component('_components.backdrop-overlay')
+            <div class="p-6">
 
             <p class="text-sm my-2 tracking-widest uppercase">
                 {{ $featuredPost->getDate()->format('M d, Y') }}
@@ -27,6 +30,8 @@
         @if (! $loop->last)
             <hr class="border-b my-6">
         @endif
+        </div>
+    @endcomponent
     @endforeach
 
     @include('_components.newsletter-signup')

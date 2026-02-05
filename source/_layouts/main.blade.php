@@ -37,7 +37,7 @@
                     </a>
                 </div>
             </span>
-            <span id="vue-search" class="flex flex-1 mt-4 w-full place-content-end items-end pr-8 font-serif">
+            <span id="vue-search" class="flex flex-1 mt-4 w-full place-content-end items-end pr-8">
             @include('_components.search')
             @include('_nav.menu')
             @include('_nav.menu-toggle')

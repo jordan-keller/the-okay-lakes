@@ -25,15 +25,13 @@ if (progressBar) {
     const scrollableHeight = documentHeight - windowHeight;
     const scrollPercent = (scrollTop / scrollableHeight) * 100;
 
-    // Base values
     let opacity = 0.8;
     let featherWidth = 10;
 
-    // At 90%+ scroll, decrease feather and increase opacity
     if (scrollPercent >= 90) {
-      const finalPercent = (scrollPercent - 90) / 10; // 0 to 1
-      featherWidth = 10 * (1 - finalPercent); // 10 to 0
-      opacity = 0.8 + 0.2 * finalPercent; // 0.8 to 1.0
+      const finalPercent = (scrollPercent - 90) / 10;
+      featherWidth = 10 * (1 - finalPercent);
+      opacity = 0.8 + 0.2 * finalPercent;
     }
 
     const featherStart = Math.max(0, 100 - featherWidth);

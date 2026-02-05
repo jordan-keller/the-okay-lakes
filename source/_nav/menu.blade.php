@@ -1,4 +1,4 @@
-<nav class="hidden lg:flex text-lg tracking-wider gap-7 font-semibold">
+<nav class="hidden lg:flex text-lg tracking-wider gap-7 font-serif font-semibold">
 
     <a title="{{ $page->siteName }} About" href="/about"
         class="text-[var(--text)]/70 transition duration-300 hover:text-[var(--text)] {{ $page->isActive('/about') ? 'active text-[var(--text)]/100 translate' : '' }}">

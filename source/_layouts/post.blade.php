@@ -5,25 +5,27 @@
 @endphp
 
 @section('body')
+<div class="max-w-4xl mb-6 mx-auto">
     @if ($page->cover_image)
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-8">
     @endif
 
-    <h1 class="leading-none mb-2 capitalize">{{ $page->title }}</h1>
-
-    <p class="text-xl md:mt-0">{{ date('F j, Y', $page->date) }}</p>
-
+<div class="max-w-4xl mx-auto">
+@component('_components.backdrop-overlay')
+<div class="p-9">
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
                 href="{{ '/blog/categories/' . $category }}"
                 title="View posts in {{ $category }}"
-                class="inline-block bg-[var(--text)] hover:bg-[var(--link)] leading-loose tracking-wide text-green-900 uppercase text-xs font-semibold rounded-sm mr-4 px-3 pt-px mb-7"
+                class="text-[var(--text)] text-xs tracking-wider font-semibold uppercase md:mt-0 pb-2 underline underline-offset-5 text-decoration-[var(--link)] hover:text-[var(--link)] hover:no-underline"
             >{{ $category }}</a>
         @endforeach
     @endif
+    <div class="leading-none capitalize font-normal text-3xl my-3 text-[var(--text)]">{{ $page->title }}</div>
+<p class="text-[var(--text)] text-xs tracking-wider font-semibold uppercase md:mt-0 pb-2">{{ date('F j, Y', $page->date) }}</p>
 
-    <div class="border-b border-[var(--text)] mb-10 pb-4 text-xl/9">
+    <div class="pb-2 text-xl/9 mt-6">
         @yield('content')
     </div>
 
@@ -44,4 +46,7 @@
             @endif
         </div>
     </nav>
+@endcomponent
+</div>
+</div>
 @endsection
